@@ -31,3 +31,4 @@ jobs:
       run: |
            julia --color=yes -e 'using Pkg; Pkg.add("BinaryBuilder")'
            julia --color=yes build_tarballs.jl --verbose --debug
+           ls products/

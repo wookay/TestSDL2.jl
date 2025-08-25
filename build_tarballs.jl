@@ -38,7 +38,12 @@ install_license ../LICENSE.txt
 
 # These are the platforms we will build for by default, unless further
 # platforms are passed in on the command line
-platforms = supported_platforms()
+# platforms = supported_platforms()
+if haskey(ENV, "CI")
+    platforms = [Platform("x86_64", "linux")] # github actions
+else
+    platforms = [Platform("x86_64", "macos")] # x86_64-apple-darwin
+end
 
 # The products that we will ensure are always built
 products = [
