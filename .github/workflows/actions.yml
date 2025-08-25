@@ -29,4 +29,5 @@ jobs:
     - uses: julia-actions/cache@v1
     - name: build_tarballs
       run: |
+           julia --color=yes -e 'using Pkg; Pkg.add("BinaryBuilder")'
            julia --color=yes build_tarballs.jl --verbose --debug
