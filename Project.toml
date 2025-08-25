@@ -1,0 +1,4 @@
+name = "TestSDL2"
+uuid = "85f3430b-e0b5-4efe-9c20-cc3ddf12c884"
+authors = ["WooKyoung Noh <wookay.noh@gmail.com>"]
+version = "0.1.0"
